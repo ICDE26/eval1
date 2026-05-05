@@ -1,0 +1,53 @@
+
+
+---
+title: "Cantidad de móviles en América"
+output: 
+  flexdashboard::flex_dashboard
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard) # always
+library(ggplot2)
+library(sf)      
+```
+
+<!-- links -->
+```{r}
+map1link = "https://github.com/ICDE26/eval1/raw/main/map1.rds"
+map2link = "https://github.com/ICDE26/eval1/raw/main/map2.rds"
+map3link = "https://github.com/ICDE26/eval1/raw/main/map3.rds"
+
+viz1=url(map1link)
+
+viz2=url(map2link)
+
+viz3=url(map3link)
+```
+
+## Sidebar {.sidebar}
+
+DOT DENSITY MAP, PROPORTIONAL SYMBOL MAP, CHOROPLETH MAP. 
+
+
+## Column {.tabset .tabset-fade}
+
+
+### DOT DENSITY MAP
+
+```{r}
+readRDS(viz1)
+```
+
+
+### PROPORTIONAL SYMBOL MAP
+
+```{r}
+readRDS(viz2)
+```
+
+### CHOROPLETH MAP
+
+```{r}
+readRDS(viz3)
+```
